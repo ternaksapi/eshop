@@ -13,7 +13,7 @@ Based on what i experienced on writing the two new features, some of the clean c
 
 This one, especially for function names, has been very much been affected after learning about clean code principles. For example, inside `ProductController.java`, the function that directs to the product create product page is named `createProductPage`, which is very helpful to easily notice which part of the code corresponds to the product creation inside the page.
 
-2. Layout and Formatting <br>
+2. Layout and Formatting
 Tidy layout and formatting, by using appropriately placed spaces and typing, really improve efficiency in coding. Good formatting definitely makes it easier to spot and find parts of the code we are trying to change or modify.
 
 Some mistakes i've found during the implementation of the two new features have been mostly typo related. What I would suggest is that try to pay close attention to names and variables, since they can be the very cause of endless debugging.
