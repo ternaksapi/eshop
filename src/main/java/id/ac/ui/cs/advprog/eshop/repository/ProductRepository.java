@@ -21,13 +21,17 @@ public class ProductRepository {
     }
 
     public Product findById(String id){
-        for (Product product : productData) {
-            if (product.getProductId().equals(id)) {
+        for (Product product : productData){
+            if (product.getProductId().equals(id)){
                 return product;
             }
         }
         return null;
     }
+
+    public void delete(String id){
+        Product product = findById(id);
+        productData.remove(product);
 
     public void update(String id, Product updateProduct) {
         for (Product product : productData) {
