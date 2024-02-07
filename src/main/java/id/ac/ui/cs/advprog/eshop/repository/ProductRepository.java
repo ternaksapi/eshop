@@ -29,9 +29,10 @@ public class ProductRepository {
         return null;
     }
 
-    public void delete(String id){
+    public void delete(String id) {
         Product product = findById(id);
         productData.remove(product);
+    }
 
     public void update(String id, Product updateProduct) {
         for (Product product : productData) {
