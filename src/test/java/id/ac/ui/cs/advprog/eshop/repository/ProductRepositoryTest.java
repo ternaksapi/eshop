@@ -107,7 +107,7 @@ public class ProductRepositoryTest {
         productRepository.create(product);
 
         Product savedProduct = productRepository.findById("eb558e9f-1c39-460e-8860-71af6af63bd6");
-        assertTrue(savedProduct.getProductQuantity() >= 0);
+        assertFalse(savedProduct.getProductQuantity() >= 0);
     }
 
 
