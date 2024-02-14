@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ProductServiceImplTest {
+class ProductServiceImplTest {
     @Mock
     private ProductRepository productRepository;
 
