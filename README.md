@@ -32,4 +32,17 @@ While high code coverage doesn't guarantee the absence of bugs, it does increase
 If we were to create another functional test that is similiar to the prior functional test, with the same setup procedures and instancce variables, it would be a better move to change the original functional test so that we can use it as a base test that contains the general setup procedures and instance variables that can be used by other functional test. By doing this, we are keepeng the cleanliness of the code by implementing the Don't Repeat Yourself principle. 
 
 
+# Refleksi Tutorial 2
+
+## Reflection 1
+
+### List the code quality issue(s) that you fixed during the exercise and explain your strategy on fixing them.
+
+During this exercise, i found 2 issues that affected the maintainability issue, according to the sonarcloud code analysis. One was on ProductServiceImplTest and the other was on ProductRepositoryTest.java. Both of the issue was caused by a 'public' modifer for the class. To fix them, i simply removed the 'public' modifer, so that it instantly writes `class ProductServiceImplTest {` and `class ProductRepositoryTest {`.
+
+## Reflection 2
+
+### Look at your CI/CD workflows (GitHub)/pipelines (GitLab). Do you think the current implementation has met the definition of Continuous Integration and Continuous Deployment? Explain the reasons (minimum 3 sentences)!
+
+In my opinion, the current implementation has met the definition of Continuous Integration and Continuous Deployment. For the Continuous Integration part, it is defined as a software development practice where continuous change & updates in codebase are integrated and verified by an automated build script using various tools (Swaraj, 2017). This one was done in part by the use of code scanning by Sonarcloud, which after every change, automatically analyze the changes and highlight whats the issue, where the issue, and why it is an issue. This is all done by an automated build script. As for the Continuous Deployment, by using koyeb for this exercise, it automatically deploys the newest version of the project, which is what the Continuous Deployment is trynig to accomplish. 
 

@@ -29,18 +29,20 @@ public class ProductRepository {
         return null;
     }
 
-    public void delete(String id) {
+    public Product delete(String id) {
         Product product = findById(id);
         productData.remove(product);
+        return product;
     }
 
-    public void update(String id, Product updateProduct) {
+    public Product update(String id, Product updateProduct) {
         for (Product product : productData) {
             if (product.getProductId().equals(id)) {
                 product.setProductName(updateProduct.getProductName());
                 product.setProductQuantity(updateProduct.getProductQuantity());
-                return;
+                return product;
             }
         }
+        return null;
     }
 }
