@@ -1,5 +1,6 @@
 package id.ac.ui.cs.advprog.eshop.repository;
 
+import enums.PaymentMethod;
 import enums.PaymentStatus;
 import id.ac.ui.cs.advprog.eshop.model.Payment;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,11 +23,11 @@ public class PaymentRepositoryTest {
         payments = new ArrayList<>();
 
         Payment payment1 = new Payment("13652556-012a-4c07-b546-54eb1396d79b",
-                "VOUCHER",this.paymentData);
+                PaymentMethod.VOUCHER.getValue(),this.paymentData);
         payments.add(payment1);
 
         Payment payment2 = new Payment("e334ef40-9eff-4da8-9487-8ee697ecbf1e",
-                "BANK_TRANSFER",this.paymentData);
+                PaymentMethod.BANK_TRANSFER.getValue(), this.paymentData);
         payments.add(payment2);
     }
     @Test
