@@ -55,5 +55,4 @@ public class ProductController {
         service.update(id, product);
         return "redirect:/product/list";
     }
-
 }
