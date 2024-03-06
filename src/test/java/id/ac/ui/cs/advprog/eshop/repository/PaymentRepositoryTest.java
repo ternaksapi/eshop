@@ -82,7 +82,15 @@ public class PaymentRepositoryTest {
         for (Payment payment : payments) {
             paymentRepository.save(payment);
         }
-        Payment findResult = paymentRepository.findById("13652556-012a-4c07-b546-54eb1396d79b");
+        Payment findResult = paymentRepository.findById("zczc");
         assertNull(findResult);
+    }
+    @Test
+    void testFindAll() {
+        for (Payment payment : payments) {
+            paymentRepository.save(payment);
+        }
+        List<Payment> findResult = paymentRepository.findAll();
+        assertEquals(payments.size(), findResult.size());
     }
 }
