@@ -22,7 +22,7 @@ public class PaymentTest {
 
         assertEquals("13652556-012a-4c07-b546-54eb1396d79b", payment.getId());
         assertEquals("VOUCHER", payment.getMethod());
-        assertEquals("REJECTED", payment.getStatus());
+        assertEquals("PENDING", payment.getStatus());
         assertEquals(this.paymentData, payment.getPaymentData());
     }
     @Test
@@ -50,6 +50,14 @@ public class PaymentTest {
         assertThrows(IllegalArgumentException.class, () -> {
             payment.setStatus("MEOW");
         });
+    }
+    @Test
+    void testSetPaymentToSuccessStatus(){
+        Payment payment = new Payment("13652556-012a-4c07-b546-54eb1396d79b",
+                "VOUCHER", this.paymentData);
+
+        payment.setStatus("SUCCESS");
+        assertEquals("SUCCESS", payment.getStatus());
     }
 }
 
