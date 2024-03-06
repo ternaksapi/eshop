@@ -2,7 +2,7 @@ package id.ac.ui.cs.advprog.eshop.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import enums.PaymentStatus;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class PaymentTest {
     @Test
     void testCreatePaymentSuccessStatus(){
         Payment payment = new Payment("13652556-012a-4c07-b546-54eb1396d79b",
-                "VOUCHER", this.paymentData, "SUCCESS");
+                "VOUCHER", this.paymentData, PaymentStatus.SUCCESS.getValue());
 
         assertEquals("13652556-012a-4c07-b546-54eb1396d79b", payment.getId());
         assertEquals("VOUCHER", payment.getMethod());
