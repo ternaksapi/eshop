@@ -77,3 +77,16 @@ While changing a previously written code that hasn't applied SOLID principles mi
 
 ### Explain the disadvantages of not applying SOLID principles to your project with examples.
 The disadvantages of not applying SOLID principles are the complete opposite of the advantages that you get. Simply, the code will not be easy to maintain, whether it is for updates, bug fixes, etc. Since we dont apply **Single Responsibility Principle**, our code might not be in modular form, making it difficult to do changes. For example, say that from the `before-solid` branch, we want to change the `ProductController`. Doing changes there might cause some unwanted changes to `CarsController`, since it extends the class. It might also cause some problem in the security field of the project.
+
+# Refleksi Tutorial 4
+
+## Reflection 1
+
+#### Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests
+I've found the TDD flow can be quite tedious, especially coming up with every tests trying to come up with every cases possibility for the module you are going to be working on, but after that it actually is very much useful, since you've already set the target and goals you want to achieve for the function from coming up with the tests, coming up with the code is easier. It also makes it easier to detect if an unwanted change has happened since you can check from the tests if the results are different.
+
+## Reflection 2
+
+### You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+While I believe the tests that i have made has successfully followed the F.I.R.S.T principle, for instance the tests run fast that they doesnt interrupt my workflow, fulfilling the **Fast** principle, the tests are also **Isolated/Independent**, **Repeatable**, but i still have doubt about them being **Self-Validating** and **Thorough**, since the tests doesn have a 100% code coverage so there might still be possibilites that some paths are still uncovered.
+
